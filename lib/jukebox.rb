@@ -46,6 +46,7 @@ def run(songs)
   help 
   puts "Please enter a command:"
   input = gets.chomp.downcase  
+<<<<<<< HEAD
   case input
   when "list"
       list(songs)
@@ -59,5 +60,21 @@ def run(songs)
   when "exit"
       exit_jukebox
   end
+=======
+  until input == "exit"
+    case input
+      when "list"
+        list(songs)
+        run(songs) 
+      when "help"
+        help
+        run(songs)
+      when "play"  
+        play(songs)
+        run(songs)
+    end
+  end
+  exit_jukebox
+>>>>>>> a2b4c0a4e8b83d6052e6354c4d286a6656ee04d3
 end
 
